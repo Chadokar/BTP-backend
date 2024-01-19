@@ -80,6 +80,10 @@ async def pos_queries(request: ProcessRequest):
     return representative_questions
 
 
+def rdm():
+    return str(datetime.datetime.now().timestamp())
+
+
 def convertToWAV(file):
     filename = f"{datetime.datetime.now().timestamp()}"
     inloc = f"uploads/{filename}.{re.split('[/;]',file.content_type)[1]}"
