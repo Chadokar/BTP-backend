@@ -27,7 +27,7 @@ class StemmingRequest(BaseModel):
 app = FastAPI()
 
 # Enable CORS (Cross-Origin Resource Sharing)
-origins = ["http://localhost:3000"]
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
