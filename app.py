@@ -111,5 +111,5 @@ async def transcribe(file: UploadFile = File(...)):
         transcript = recognizer.recognize_google(data, key=None)
         return {"transcript": transcript}
     except Exception as e:
-        print("error:", e)
+        print("error: ", str(e))
         raise HTTPException(status_code=500, detail="Unable to transcribe")
